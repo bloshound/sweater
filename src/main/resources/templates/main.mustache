@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+
+<html lang="ru">
+<head>
+    <title>Заголовок</title>
+</head>
+<body>
+<div>Список сообщений</div>
+<div>
+    <form method="POST">
+        <label>
+            <input type="text" name="text" placeholder="Введите сообщение">
+            <input type="text" name="tag" placeholder="Tэг">
+            <button type="submit">Добавить</button>
+        </label>
+    </form>
+</div>
+{{#messages}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{text}}</span>
+        <i>{{tag}}</i>
+    <div>
+{{/messages}}
+</body>
+</html>
