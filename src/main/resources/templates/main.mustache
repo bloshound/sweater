@@ -5,7 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-div>
 <form action="/logout" method="POST">
     <label> <input type="submit" value="Sign Out"/></label>
     <input type="hidden" name="_csrf" value="{{_csrf.token}}">
@@ -19,12 +18,15 @@ div>
         <button type="submit">Добавить</button>
     </form>
 </div>
-{{#messages}}
+
+<div>
+    {{#messages}}
     <div>
         <b>{{id}}</b>
         <span>{{text}}</span>
         <i>{{tag}}</i>
     <div>
-{{/messages}}
+    {{/messages}}
+</div>
 </body>
 </html>
