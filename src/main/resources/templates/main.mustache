@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html" lang="ru">
 <head>
     <title>Заголовок</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -9,13 +9,22 @@
     <label> <input type="submit" value="Sign Out"/></label>
     <input type="hidden" name="_csrf" value="{{_csrf.token}}">
 </form>
-<div>Список сообщений</div>
 <div>
     <form method="POST">
-        <label> <input type="text" name="text" placeholder="Введите сообщение"></label>
+        <label><input type="text" name="text" placeholder="Введите сообщение"></label>
         <label><input type="text" name="tag" placeholder="Tэг"></label>
         <input type="hidden" name="_csrf" value="{{_csrf.token}}">
         <button type="submit">Добавить</button>
+    </form>
+</div>
+
+<div>Список сообщений</div>
+
+<div>
+    <form method="POST" action="filter">
+        <label><input type="text" name="filter"></label>
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+        <button type="submit">Найти</button>
     </form>
 </div>
 
