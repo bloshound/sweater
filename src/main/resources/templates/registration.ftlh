@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
-<head>
-    <title>Spring Security Example </title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-</head>
-<body>
-Add new user
+<#import "parts/common.ftlh" as c>
+<#import "parts/login_registration.ftlh" as l>
 
-{{#message}}
-<div>{{message}}</div>
-{{/message}}
-
-<form action="/registration" method="POST">
-    <div><label> User Name : <input type="text" name="username"/> </label></div>
-    <div><label> Password: <input type="password" name="password"/> </label></div>
-    <input type="hidden" name="_csrf" value="{{_csrf.token}}">
-    <div><input type="submit" value="Sign In"/></div>
-</form>
-</body>
-</html>
+<@c.page>
+    Add new user
+    ${message!}
+    <@l.login "/registration" />
+    <div><a href="/login">On login page</a></div>
+</@c.page>
