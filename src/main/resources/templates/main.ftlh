@@ -6,6 +6,10 @@
         <@l.logout/>
     </div>
 
+    <span>
+        <a href="/user">User list</a>
+    </span>
+
     <div>
         <form method="POST">
             <label><input type="text" name="text" placeholder="Input message"></label>
